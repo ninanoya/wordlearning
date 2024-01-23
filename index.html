@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>단어 학습 응용 프로그램</title>
+    <style>
+        /* 스타일은 이전에 제공된 코드를 그대로 사용합니다. */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border-radius: 5px;
+            display: none; /* 필요에 따라 'block'으로 변경할 수 있습니다. */
+        }
+        #quizSection {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Word Learning Application</h1>
+        <a href="http://blog.naver.com/ninano__ya" target="_blank">Copyright</a>
+
+        <div>
+            <input type="text" id="wordInput" placeholder="Word">
+            <input type="text" id="meaningInput" placeholder="Meaning">
+            <button onclick="addWord()">Add Word</button>
+        </div>
+
+        <button onclick="startQuiz()">Start Quiz</button>
+
+        <div id="quizSection">
+            <p id="question">Quiz question will appear here</p>
+            <input type="text" id="answerInput" placeholder="Your Answer">
+            <button onclick="checkAnswer()">Submit Answer</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+
+    <!-- 자바스크립트 코드는 외부 파일인 script.js로 연결됩니다. -->
+    <script src="script.js"></script>
+</body>
+</html>
